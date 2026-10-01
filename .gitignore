@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# secrets / local settings (never commit)
+.env
+.env.*
+!.env.example
+
+# local state
+*.sqlite
+*.sqlite3
+verifier-pins/
+out/

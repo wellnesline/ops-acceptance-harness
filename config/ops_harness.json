@@ -1,0 +1,24 @@
+{
+  "_comment": "synthetic sample / example registry. Replace with your own services; every name and path below is an example.",
+  "schema_version": 1,
+  "services": [
+    {
+      "id": "example-harness",
+      "label": "Example service (the harness itself)",
+      "source_paths": ["ops_harness"],
+      "entrypoints": ["scripts/ops/harness.py"],
+      "runbook": "docs/OPS_LANGGRAPH.md",
+      "checks": ["registry.paths", "runtime.tools"]
+    }
+  ],
+  "workflows": [
+    {
+      "id": "daily-ops",
+      "label": "Daily health check",
+      "service_ids": ["example-harness"]
+    }
+  ],
+  "scheduled_tasks": [
+    {"name": "example-task", "path": "\\", "action_contains": "run_example.ps1"}
+  ]
+}

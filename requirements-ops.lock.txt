@@ -1,0 +1,4 @@
+# synthetic sample / dependency pins for `python scripts/ops/harness.py --setup`.
+# langsmith is optional (ops_harness falls back to a no-op tracing_context); pytest is only for tests.
+langgraph==1.2.12
+langgraph-checkpoint-sqlite==3.1.1
